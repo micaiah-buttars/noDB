@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
-import confidants from './confidants'
 
 
 class ConfidantView extends Component {
-    
-    
     render(){
-        let {index} = this.props;
-        let userArr = confidants.slice()
+        let index = this.props.index;
+        let userArr = this.props.userArr;
         
-        return (
+        let render;
+
+        if(userArr[index]){
+            render = (
             <div className="cardContainer">
                 <section className="cardDisplay">
                     <div className="card">
@@ -36,7 +36,13 @@ class ConfidantView extends Component {
                 </section>
             
             </div>
-        )
+        )} else{
+            render = (
+            <div></div>
+            )
+        }
+        return render
+        
     }
 }
 

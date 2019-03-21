@@ -1,14 +1,18 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 
+import ConfidantView from './ConfidantView'
+import AddConfidant from './AddConfidant';
 
 
-class CardView extends Component {
+
+class ViewDisplay extends Component {
     constructor(){
         super();
 
         this.state = {
-            userArr: []
+            userArr: [],
+            index: 0
         }
     }
 
@@ -28,29 +32,32 @@ class CardView extends Component {
         }).catch(err => console.log(err))
     }
     deleteConfidant = id => {
-        axios.delete(`api/confidants/${confidant.id}`).then(res => {
+        axios.delete(`api/confidants/${id}`).then(res => {
             this.setState({
                 userArr: res.data
             })
         }).catch(err => console.log(err))
     }
     componentDidMount() {
-        axios.get('/api/animals').then(res => {
+        axios.get('/api/confidants').then(res => {
             this.setState({
                 userArr: res.data
             })
+            console.log(this.state.userArr)
         }).catch(err => console.log(err))
     }
 
     render() {
         return (
             <div>
-                <ConfidantView 
+                <ConfidantView
+                index={this.state.index}
                 userArr={this.state.userArr}
                 rankUpConfidant={this.rankUpConfidant}
-                addConfidant={this.addConfidant}
                 deleteConfidant={this.deleteConfidant}
                 />
+                <AddConfidant 
+                addConfidant={this.addConfidant}/>
             </div>
         )
     }
@@ -58,4 +65,4 @@ class CardView extends Component {
 
 }
 
-export default CardView
+export default ViewDisplay

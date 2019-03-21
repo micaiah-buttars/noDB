@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
-import ConfidantView from './components/ConfidantView';
+import ViewDisplay from './components/ViewDisplay'
 
 class App extends Component {
   constructor(){
@@ -10,12 +9,13 @@ class App extends Component {
       index: 0
     }
   }
-  
+
   render() {
     return (
       <div className="App">
       {/* component handling card display */}
-      <ConfidantView index={this.state.index}/>
+      <ViewDisplay />
+
       {/* component handling adding confidant to userArr */}
       </div>
     );

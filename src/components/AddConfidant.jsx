@@ -1,26 +1,26 @@
 import React, { Component } from 'react'
 
 class AddConfidant extends Component {
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
 
         this.state = {
             title: ''
         }
 
-        handleChange = e => {
-            let {value} = e.target
+        // handleChange = e => {
+        //     let {value} = e.target
 
-            this.setState({
-                title: value
-            })
-        }
+        //     this.setState({
+        //         title: value
+        //     })
+        // }
 
-        handleClick = () => {
-            let confidant = this.state
+        // handleClick = () => {
+        //     let confidant = this.state
 
-            this.props.handleAddConfidant(confidant)
-        }
+        //     this.props.handleAddConfidant(confidant)
+        // }
 
     }
     render(){
@@ -32,3 +32,5 @@ class AddConfidant extends Component {
         )
     }
 }
+
+export default AddConfidant
