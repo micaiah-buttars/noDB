@@ -13,10 +13,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      {/* component handling card display */}
       <ViewDisplay />
-
-      {/* component handling adding confidant to userArr */}
+      {/* component handling card display */}
       </div>
     );
   }

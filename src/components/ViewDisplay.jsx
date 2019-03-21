@@ -43,14 +43,40 @@ class ViewDisplay extends Component {
             this.setState({
                 userArr: res.data
             })
-            console.log(this.state.userArr)
         }).catch(err => console.log(err))
     }
+
+    handleIncrement = () => {
+        if(this.state.index === this.state.userArr.length - 1){
+            this.setState({
+                index: this.state.userArr.length - 1
+            })
+        } else {
+            this.setState({
+              index: this.state.index + 1
+            })
+        }
+     }
+
+    handleDecrement = () => {
+        if(this.state.index === 0){
+            this.setState({
+                index: 0
+            })
+        }else{
+            this.setState({
+              index: this.state.index - 1
+            })
+        }
+    }
+
 
     render() {
         return (
             <div>
                 <ConfidantView
+                handleDecrement={this.handleDecrement}
+                handleIncrement={this.handleIncrement}
                 index={this.state.index}
                 userArr={this.state.userArr}
                 rankUpConfidant={this.rankUpConfidant}

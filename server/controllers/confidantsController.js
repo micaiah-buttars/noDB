@@ -8,8 +8,8 @@ let confidants = [
     },
     {
         id: 1,
-        title: "Morgana",
-        name: "Magician",
+        title: "Magician",
+        name: "Morgana",
         rank: 0,
         cardUrl: "https://vignette.wikia.nocookie.net/megamitensei/images/e/e6/P5_Magician_arcana_cooperation.png/revision/latest?cb=20160915143227",
     },
@@ -148,7 +148,7 @@ let confidants = [
     },
 ]
 
-let userArr = confidants.slice()
+let userArr = [...confidants]
 
 module.exports = {
     get: (req, res) => {
@@ -192,7 +192,7 @@ module.exports = {
     delete: (req, res) => {
         let { id } = req.params
 
-        let index = userArr.findIndex(confidant => confidant.id === req.params.id)
+        let index = userArr.findIndex(confidant => +confidant.id === +id)
 
         userArr.splice(index, 1)
         res.send(userArr)

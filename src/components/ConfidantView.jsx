@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
+import './ConfidantView.css'
 
+import ConfidantNav from './ConfidantNav'
 
 class ConfidantView extends Component {
     render(){
@@ -13,24 +15,27 @@ class ConfidantView extends Component {
             <div className="cardContainer">
                 <section className="cardDisplay">
                     <div className="card">
-                        <img className="cardImage" src="" alt=""/>
-                        <h3 className="deleteX">X</h3>
-                        {/* needs onClick method */}
+                        <img className="cardImage" width="240px" height="480px" src={userArr[index].cardUrl} alt="Confidant Tarot"/>
+                        <h3 className="deleteX" onClick={() => this.props.deleteConfidant(userArr[index].id)}>X</h3>
                     </div>
-                    {/* component handling card id, and card nav */}
+                    <ConfidantNav
+                    index={index}
+                    userArr={userArr}
+                    handleDecrement={this.props.handleDecrement}
+                    handleIncrement={this.props.handleIncrement}/>
                 </section>
-                <section className="confidantInfo">
+                <section className="confidantInfoContainer">
                     <div className="confidantName">
-                        <p>Confidant</p>
-                        <p>{`${userArr[index].name}`}</p>
+                        <span>Confidant</span> <br/>
+                        <span className="confidantNameDisplay">{`${userArr[index].name}`}</span>
                     </div>
                     <div className="arcanaInfo">
-                        <p>The</p>
-                        <p>{`${userArr[index].title}`}</p>
+                        <span>The </span>
+                        <span className="confidantTitle">{`${userArr[index].title}`}</span>
                     </div>
                     <div className="rankInfo">
-                        <p>Rank</p>
-                        <p>{`${userArr[index].rank}`}</p>
+                        <span>Rank </span>
+                        <span className="confidantRank">{`${userArr[index].rank}`}</span>
                         {/* component handling rank up function */}
                     </div>
                 </section>
