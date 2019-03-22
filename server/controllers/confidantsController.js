@@ -2,7 +2,7 @@ let confidants = [
     {
         id: 0,
         title: "Fool",
-        name: "Igor",
+        name: "Prison Master",
         rank: 0,
         cardUrl: "https://vignette.wikia.nocookie.net/megamitensei/images/0/0b/P5_Fool_arcana_cooperation.png/revision/latest?cb=20160915143157",
     },

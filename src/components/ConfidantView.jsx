@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './ConfidantView.css'
+import './styles.css'
 
 import ConfidantNav from './ConfidantNav'
 import RankUp from './RankUp'
@@ -16,8 +16,8 @@ class ConfidantView extends Component {
             <div className="cardContainer">
                 <section className="cardDisplay">
                     <div className="card">
-                        <img className="cardImage" width="240px" height="480px" src={userArr[index].cardUrl} alt="Confidant Tarot"/>
                         <h3 className="deleteX" onClick={() => this.props.deleteConfidant(userArr[index].id)}>X</h3>
+                        <img className="cardImage" width="240px" height="480px" src={userArr[index].cardUrl} alt="Confidant Tarot"/>
                     </div>
                     <ConfidantNav
                         index={index}
@@ -27,21 +27,21 @@ class ConfidantView extends Component {
                 </section>
                 <section className="confidantInfoContainer">
                     <div className="confidantName">
-                        <span>Confidant</span> <br/>
+                        <span className="confidantArticle">Confidant</span> <br/>
                             <span className="confidantNameDisplay">{`${userArr[index].name}`}</span>
                     </div>
                     <div className="arcanaInfo">
-                        <span>The </span>
+                        <span className="article">Arcana </span>
                             <span className="confidantTitle">{`${userArr[index].title}`}</span>
                     </div>
                     <div className="rankInfo">
-                        <span>Rank </span>
+                        <span className="article">Rank </span>
                             <span className="confidantRank">{`${userArr[index].rank}`}</span>
+                    </div>
                         <RankUp 
                             index={index}
                             userArr={userArr}
                             rankUpConfidant={this.props.rankUpConfidant}/>
-                    </div>
                 </section>
             
             </div>

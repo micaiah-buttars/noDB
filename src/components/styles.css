@@ -1,0 +1,108 @@
+
+body {
+    background-color: rgb(233, 5, 36);
+}
+.cardContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: row
+}
+.cardDisplay{
+    position: relative;
+    flex-direction: column
+
+}
+.card{
+    
+}
+
+.deleteX{
+    font-size: 2em;
+    position: absolute;
+    margin: 1em;
+    text-shadow: 2px 2px #FFF
+
+}
+
+
+
+.confidantInfoContainer{
+    margin: 1em;
+    flex-direction: column;
+    text-transform: uppercase;
+    font-size: 2em;
+    font-weight: 900
+}
+.confidantName{
+    position: relative;
+    margin: .3em;
+}
+.confidantArticle{
+    position:absolute;
+    color: black;
+    font-size: 1.1em;
+    text-shadow:
+        -4px -4px 0 #FFF,  
+        2px -4px 0 #FFF,
+        -4px 2px 0 #FFF,
+        2px 2px 0 #FFF;
+    font-style: italic;
+    z-index: 1;
+    margin-left: 1em;
+}
+.confidantNameDisplay{
+
+    background-color: black;
+    padding: 2px 2em ;
+    border: 7px solid white;
+    z-index: -1;
+    color: white;
+    font-style: normal;
+    text-transform: capitalize
+
+}
+.article{
+    font-size: .7em;
+
+}
+.arcanaInfo{
+    position: relative;
+    margin: 1em;
+    border: .3em solid grey;
+    background-color: black;
+    padding-left: 1em;
+    padding-right: 1em;
+    color: white;
+    font-style: italic
+
+
+}
+.confidantTitle{
+    color: black;
+    font-size: 2em;
+    text-shadow:
+        -4px -4px 0 rgb(255, 244, 83),  
+        2px -4px 0 rgb(255, 244, 83),
+        -4px 2px 0 rgb(255, 244, 83),
+        2px 2px 0 rgb(255, 244, 83);
+    font-style: normal;
+    text-transform: capitalize;
+    font-weight: 700
+}
+
+.rankInfo{
+    border: .3em solid grey;
+    background-color: black;
+    padding-left: 1em;
+    padding-right: 1em;
+    color: white;
+    font-style: italic
+
+
+}
+
+.confidantRank{
+    color: rgb(255, 244, 83);
+    font-size: 2em;
+}
+
