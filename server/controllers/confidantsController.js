@@ -157,6 +157,7 @@ module.exports = {
 
     create: (req, res) => {
         let { title } = req.body
+        console.log(title)
         let foundConfidant = confidants.find((confidant) => {
             return confidant.title === title
         })
@@ -165,9 +166,9 @@ module.exports = {
         })
 
         if(!foundConfidant){
-            res.status(404).send(alert("Confidant Not Found"))
+            res.status(404).send(console.log("Confidant Not Found"))
         } else if(userCheck){
-            res.status(409).send(alert("Confidant is Already In List"))
+            res.status(409).send(console.log("Confidant is Already In List"))
         } else if(foundConfidant && !userCheck){
             userArr.push(foundConfidant)
             res.status(200).send(userArr)
@@ -175,14 +176,17 @@ module.exports = {
     },
 
     update: (req, res) => {
+        let {id} = req.params
+        let index = userArr.findIndex(confidant => +confidant.id === +id)
+        
+
         let updatedConfidant = {
-            id,
-            title,
-            name,
-            rank: rank++,
-            cardUrl
+            id: userArr[index].id,
+            title: userArr[index].title,
+            name: userArr[index].name,
+            rank: userArr[index].rank + 1,
+            cardUrl: userArr[index].cardUrl
         }
-        let index = userArr.findIndex(confidant => confidant.id === req.params.id)
 
         userArr.splice(index, 1, updatedConfidant)
         res.send(userArr)
@@ -191,7 +195,6 @@ module.exports = {
 
     delete: (req, res) => {
         let { id } = req.params
-
         let index = userArr.findIndex(confidant => +confidant.id === +id)
 
         userArr.splice(index, 1)

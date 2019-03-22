@@ -7,22 +7,20 @@ class AddConfidant extends Component {
         this.state = {
             title: ''
         }
-
-        // handleChange = e => {
-        //     let {value} = e.target
-
-        //     this.setState({
-        //         title: value
-        //     })
-        // }
-
-        // handleClick = () => {
-        //     let confidant = this.state
-
-        //     this.props.handleAddConfidant(confidant)
-        // }
-
+    
     }
+    handleChange = e => {
+        let {value} = e.target
+
+        this.setState({
+            title: value
+        })
+    }
+
+    handleClick = () => {
+        this.props.addConfidant(this.state)
+    }
+
     render(){
         return (
             <div>

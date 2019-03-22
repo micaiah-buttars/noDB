@@ -12,12 +12,12 @@ class ViewDisplay extends Component {
 
         this.state = {
             userArr: [],
-            index: 0
+            index: 0,
         }
     }
 
-    rankUpConfidant = confidant => {
-        axios.put(`api/confidants/${confidant.id}`, confidant).then(res => {
+    rankUpConfidant = () => {
+        axios.put(`api/confidants/${this.state.userArr[this.state.index].id}`).then(res => {
             this.setState({
                 userArr: res.data
             })

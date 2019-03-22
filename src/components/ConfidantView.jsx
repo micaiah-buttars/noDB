@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './ConfidantView.css'
 
 import ConfidantNav from './ConfidantNav'
+import RankUp from './RankUp'
 
 class ConfidantView extends Component {
     render(){
@@ -36,6 +37,10 @@ class ConfidantView extends Component {
                     <div className="rankInfo">
                         <span>Rank </span>
                         <span className="confidantRank">{`${userArr[index].rank}`}</span>
+                        <RankUp 
+                        index={index}
+                        userArr={userArr}
+                        rankUpConfidant={this.props.rankUpConfidant}/>
                         {/* component handling rank up function */}
                     </div>
                 </section>
