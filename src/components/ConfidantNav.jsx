@@ -16,9 +16,9 @@ class ConfidantNav extends Component {
         return (
             <div>
                 <div className="confidantNav">
-                    <h3 className="prev" onClick={this.handleClickPrev}>Previous</h3>
+                    <h3 className="prev" onClick={this.handleClickPrev}>{'<'}</h3>
                     <h3 className="confidantId">{userArr[index].id}</h3>
-                    <h3 className="next" onClick={this.handleClickNext}>Next</h3>
+                    <h3 className="next" onClick={this.handleClickNext}>{'>'}</h3>
                 </div>
             </div>
         )

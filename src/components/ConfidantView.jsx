@@ -3,6 +3,7 @@ import './styles.css'
 
 import ConfidantNav from './ConfidantNav'
 import RankUp from './RankUp'
+import AddConfidant from './AddConfidant'
 
 class ConfidantView extends Component {
     render(){
@@ -24,24 +25,38 @@ class ConfidantView extends Component {
                         userArr={userArr}
                         handleDecrement={this.props.handleDecrement}
                         handleIncrement={this.props.handleIncrement}/>
+                        <AddConfidant 
+                        addConfidant={this.props.addConfidant}/>
                 </section>
                 <section className="confidantInfoContainer">
                     <div className="confidantName">
                         <span className="confidantArticle">Confidant</span> <br/>
-                            <span className="confidantNameDisplay">{`${userArr[index].name}`}</span>
+                            <div className="confidantNameBorder">
+                            <div className="confidantNameDisplay">
+                            <span>{`${userArr[index].name}`}</span>
+                            </div>
+                            
+                            </div>
+                            
                     </div>
                     <div className="arcanaInfo">
+                        <div className="arcanaBorder">
+                        <div className="arcanaInfoDisplay">
                         <span className="article">Arcana </span>
-                            <span className="confidantTitle">{`${userArr[index].title}`}</span>
+                        <span className="confidantTitle">{`${userArr[index].title}`}</span>
+                        </div>
+                        </div>
+
+                            
                     </div>
-                    <div className="rankInfo">
+                    {/* <div className="rankInfo">
                         <span className="article">Rank </span>
                             <span className="confidantRank">{`${userArr[index].rank}`}</span>
                     </div>
                         <RankUp 
                             index={index}
                             userArr={userArr}
-                            rankUpConfidant={this.props.rankUpConfidant}/>
+                            rankUpConfidant={this.props.rankUpConfidant}/> */}
                 </section>
             
             </div>

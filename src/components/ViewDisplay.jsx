@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 
 import ConfidantView from './ConfidantView'
-import AddConfidant from './AddConfidant';
+
 
 class ViewDisplay extends Component {
     constructor(){
@@ -79,9 +79,8 @@ class ViewDisplay extends Component {
                 userArr={this.state.userArr}
                 rankUpConfidant={this.rankUpConfidant}
                 deleteConfidant={this.deleteConfidant}
+                addConfidant={this.addConfidant}
                 />
-                <AddConfidant 
-                addConfidant={this.addConfidant}/>
             </div>
         )
     }

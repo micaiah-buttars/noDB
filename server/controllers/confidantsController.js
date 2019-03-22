@@ -157,7 +157,6 @@ module.exports = {
 
     create: (req, res) => {
         let { title } = req.body
-        console.log(title)
         let foundConfidant = confidants.find((confidant) => {
             return confidant.title === title
         })
