@@ -4,8 +4,6 @@ import axios from 'axios'
 import ConfidantView from './ConfidantView'
 import AddConfidant from './AddConfidant';
 
-
-
 class ViewDisplay extends Component {
     constructor(){
         super();
@@ -38,6 +36,7 @@ class ViewDisplay extends Component {
             })
         }).catch(err => console.log(err))
     }
+
     componentDidMount() {
         axios.get('/api/confidants').then(res => {
             this.setState({
@@ -70,7 +69,6 @@ class ViewDisplay extends Component {
         }
     }
 
-
     render() {
         return (
             <div>
@@ -87,8 +85,6 @@ class ViewDisplay extends Component {
             </div>
         )
     }
-
-
 }
 
 export default ViewDisplay
