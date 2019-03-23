@@ -15,8 +15,9 @@ class ConfidantView extends Component {
         if(userArr[index]){
             render = (
             <div className="cardContainer">
+            
                 <section className="cardDisplay">
-                    <div className="card">
+                    <div>
                         <h3 className="deleteX" onClick={() => this.props.deleteConfidant(userArr[index].id)}>X</h3>
                         <img className="cardImage" width="240px" height="480px" src={userArr[index].cardUrl} alt="Confidant Tarot"/>
                     </div>

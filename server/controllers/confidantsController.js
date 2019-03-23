@@ -183,8 +183,14 @@ module.exports = {
             id: userArr[index].id,
             title: userArr[index].title,
             name: userArr[index].name,
-            rank: userArr[index].rank + 1,
+            rank: userArr[index].rank,
             cardUrl: userArr[index].cardUrl
+        }
+
+        if(updatedConfidant.rank < 9){
+            updatedConfidant.rank = updatedConfidant.rank + 1
+        }else if(updatedConfidant.rank >= 9){
+           updatedConfidant.rank = "MAX"
         }
 
         userArr.splice(index, 1, updatedConfidant)
