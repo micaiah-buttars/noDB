@@ -24,7 +24,7 @@ class AddConfidant extends Component {
     render(){
         return (
             <div>
-                <input type="text" placeholder="Add Confidant by Arcana" title="title" onChange={this.handleChange}/>
+                <input className="input" type="text" placeholder="Add Confidant by Arcana" title="title" onChange={this.handleChange}/>
                 <button onClick={this.handleClick}>Add</button>
             </div>
         )

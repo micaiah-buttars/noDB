@@ -49,14 +49,19 @@ class ConfidantView extends Component {
 
                             
                     </div>
-                    {/* <div className="rankInfo">
-                        <span className="article">Rank </span>
+                    <div className="rankInfo">
+                    <div className="rankBorder">
+                    <div className="rankDisplay">
+                    <span className="article">Rank </span>
                             <span className="confidantRank">{`${userArr[index].rank}`}</span>
+                    
+                    </div>
                     </div>
                         <RankUp 
                             index={index}
                             userArr={userArr}
-                            rankUpConfidant={this.props.rankUpConfidant}/> */}
+                            rankUpConfidant={this.props.rankUpConfidant}/>
+                    </div>
                 </section>
             
             </div>

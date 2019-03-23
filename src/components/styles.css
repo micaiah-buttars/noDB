@@ -1,32 +1,37 @@
 
 body {
     padding-top: 5em;
-    background-color: rgb(233, 5, 36);
-    white-space: nowrap
+    background-image: linear-gradient(rgb(214,16,40),rgb(246,2,89));
+    white-space: nowrap;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden
 }
 .cardContainer{
+    transform: rotate(-10deg);
     display: flex;
     justify-content: center;
     flex-direction: row;
+    margin-left: -20em;
+    margin-top: 1em;
 }
-.cardDisplay{
-    position: relative;
-    flex-direction: column
+    .cardDisplay{
+        position: relative;
+        flex-direction: column;
+        float: left
 
+    }
+
+
+    .deleteX{
+        font-size: 2em;
+        position: absolute;
+        margin: 1em;
+        text-shadow: 2px 2px #FFF
+    }
+.input{
+    width: 200px;
 }
-.cardImage{
-    
-}
-
-.deleteX{
-    font-size: 2em;
-    position: absolute;
-    margin: 1em;
-    text-shadow: 2px 2px #FFF
-
-}
-
-
 
 .confidantInfoContainer{
     display: flex;
@@ -36,130 +41,153 @@ body {
     font-size: 2em;
     font-weight: 900
 }
-.confidantName{
-    transform: rotate(-5deg);
-    position: relative;
-    margin: .3em;
-    height: 3.5em;
-}
-.confidantArticle{
-    transform: rotate(-3deg);
-    position: absolute;
-    color: black;
-    font-size: 1.1em;
-    text-shadow:
-        -4px -4px 0 #FFF,  
-        2px -4px 0 #FFF,
-        -4px 2px 0 #FFF,
-        2px 2px 0 #FFF;
-    font-style: italic;
-    z-index: 1;
-    margin-top: .45em;
-    margin-left: 1em;
-}
-.confidantNameBorder{
-    position: absolute;
-    z-index: -2;
-    height: 2em;
-    clip-path: polygon(3% 8%, 100% 0, 90% 78%, 6% 72%);
-    background-color: white;
-    padding: .3em .2em ;
-    border: 20px solid white;
-}
-.confidantNameDisplay{
-    margin-top: -.6em;
-    justify-content: center;
-    text-align: center;
-    clip-path: polygon(0 16%, 100% 0, 93% 100%, 2% 88%);
-    background-color: black;
-    padding: 2px 2em ;
-    border: 20px solid black;
-    z-index: -1;
-    color: white;
-    font-style: normal;
-    text-transform: capitalize
+    .confidantName{
+        transform: rotate(-5deg);
+        position: relative;
+        margin: .3em;
+        height: 3.5em;
+    }
+        .confidantArticle{
+            transform: rotate(-3deg);
+            position: absolute;
+            color: black;
+            font-size: 1.1em;
+            text-shadow:
+                -4px -4px 0 #FFF,  
+                2px -4px 0 #FFF,
+                -4px 2px 0 #FFF,
+                2px 2px 0 #FFF;
+            font-style: italic;
+            z-index: 1;
+            margin-top: .45em;
+            margin-left: 1em;
+        }
+        .confidantNameBorder{
+            position: absolute;
+            z-index: -2;
+            height: 2em;
+            clip-path: polygon(3% 8%, 100% 0, 90% 78%, 6% 72%);
+            background-color: white;
+            padding: .3em .2em ;
+            border: 20px solid white;
+        }
+        .confidantNameDisplay{
+            margin-top: -.6em;
+            justify-content: center;
+            text-align: center;
+            clip-path: polygon(0 16%, 100% 0, 93% 100%, 2% 88%);
+            background-color: black;
+            padding: 2px 2em ;
+            border: 20px solid black;
+            z-index: -1;
+            color: white;
+            font-style: normal;
+            text-transform: capitalize
 
-}
-.article{
-    font-size: .7em;
-    text-transform: uppercase
-
-}
-.arcanaInfo{
-    position: relative;
-    margin-top: 1em;
-    margin-left: .5em;
-    background-color: black;
-    padding-left: 1em;
-    padding-right: 1em;
-    color: white;
-    font-style: italic
+        }
+    .article{
+        font-size: .7em;
+        text-transform: uppercase;
+        font-style: italic;
+        
 
 
-}
-.arcanaBorder{
-    position: absolute;
-    z-index: -2;
-    height: 4em;
-    clip-path: polygon(3% 8%, 100% 0, 90% 78%, 6% 72%);
-    background-color: #333;
-    padding: .3em .2em ;
-    border: 20px solid #333;
-}
-.arcanaInfoDisplay{
-    margin-top: -.5em;
-    justify-content: center;
-    text-align: center;
-    clip-path: polygon(0 16%, 100% 0, 93% 100%, 3% 88%);
-    background-color: black;
-    padding: 2px 2em ;
-    border: 20px solid black;
-    z-index: -1;
-    color: white;
-    font-style: normal;
-    text-transform: capitalize
-}
-.confidantTitle{
-    color: black;
-    font-size: 2em;
-    text-shadow:
-        -1px -1px 0 rgb(255, 244, 83),  
-        2px -1px 0 rgb(255, 244, 83),
-        -1px 2px 0 rgb(255, 244, 83),
-        2px 2px 0 rgb(255, 244, 83);
-    -webkit-text-stroke: 1px rgb(255, 244, 83);
-    font-style: normal;
-    text-transform: capitalize;
-    font-weight: 700;
-    margin-left: .3em;
-}
-
-.rankInfo{
-    display: flex;
-    border: .3em solid grey;
-    background-color: black;
-    padding-left: 1em;
-    padding-right: 1em;
-    color: white;
-    font-style: italic
+    }
+    .arcanaInfo{
+        transform: rotate(2deg);
+        position: relative;
+        margin-top: .2em;
+        margin-left: -.7em;
+        background-color: black;
+        padding-left: 1em;
+        padding-right: 1em;
+        color: white;
+        font-style: italic
 
 
-}
+    }
+        .arcanaBorder{
+            position: absolute;
+            z-index: -2;
+            height: 3em;
+            clip-path: polygon(1% 36%, 91% 0, 97% 100%, 4% 92%);
+            background-color: #333;
+            padding: .3em .2em ;
+            border: 20px solid #333;
+        }
+        .arcanaInfoDisplay{
+            margin-top: -.2em;
+            justify-content: center;
+            text-align: center;
+            clip-path: polygon(0 34%, 91% 0, 98% 100%, 1% 92%);
+            background-color: black;
+            padding: 2px 2em ;
+            border: 20px solid black;
+            z-index: -1;
+            color: white;
+            font-style: normal;
+            text-transform: capitalize
+        }
+        .confidantTitle{
+            color: black;
+            font-size: 2em;
+            text-shadow:
+                -1px -1px 0 rgb(247,214,33),  
+                2px -1px 0 rgb(247,214,33),
+                -1px 2px 0 rgb(247,214,33),
+                2px 2px 0 rgb(247,214,33);
+            -webkit-text-stroke: 1px rgb(247,214,33);
+            font-style: normal;
+            text-transform: capitalize;
+            font-weight: 700;
+            margin-left: .3em;
+        }
 
-.confidantRank{
-    color: rgb(255, 244, 83);
-    font-size: 2em;
-}
+    .rankInfo{
+        transform: rotate(18deg);
+        position: relative;
+        margin-top: 4em;
+        margin-left: 1em;
+        color: white;
+    }
+        .rankBorder{
+            position: absolute;
+            z-index: -2;
+            height: 4em;
+            clip-path: polygon(4% 22%, 100% 4%, 98% 89%, 2% 80%);
+            background-color: #333;
+            padding: .3em .2em ;
+            border: 20px solid #333;
 
-.confidantNav{
-    width: 240px;
-    display: inline-flex;
-    justify-content: space-between;
+        }
+        .rankDisplay{
+            margin-top: -.4em;
+            justify-content: center;
+            text-align: center;
+            clip-path: polygon(0 22%, 100% 4%, 100% 89%, 0 80%);
+            background-color: black;
+            padding: 2px 1em ;
+            border: 20px solid black;
+            z-index: -1;
+            font-style: normal;
+            text-transform: capitalize
 
-}
-.confidantId{
-    text-align: center;
-    font-size: 3em;
-    margin-top: 0em;
-}
+        }
 
+        .confidantRank{
+            color: rgb(247,214,33);
+            font-size: 3em;
+            margin-left: .2em;
+        }
+        .rankUpButton{
+            position: absolute;
+            margin-top: 5em;
+            margin-left: 1em;
+            transform: rotate(8deg)
+        } 
+
+    .confidantNav{
+        width: 240px;
+        display: inline-flex;
+        justify-content: space-between;
+    }
