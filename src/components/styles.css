@@ -93,7 +93,6 @@ body {
     .arcanaInfo{
         transform: rotate(2deg);
         position: relative;
-        /* margin-top: .2em; */
         margin-left: -.7em;
         background-color: black;
         padding-left: 1em;
@@ -101,7 +100,7 @@ body {
         color: white;
         font-style: italic
     }
-    
+
         .arcanaBorder{
             position: absolute;
             z-index: -2;
