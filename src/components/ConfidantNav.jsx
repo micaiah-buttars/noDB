@@ -11,13 +11,11 @@ class ConfidantNav extends Component {
     }
 
     render() {
-        let index = this.props.index;
-        let userArr = this.props.userArr;
         return (
             <div>
                 <div className="confidantNav">
-                    <button className="button" onClick={this.handleClickPrev}>{'Previous'}</button>
-                    <button className="button" onClick={this.handleClickNext}>{'Next'}</button>
+                    <button className="buttonPrev" onClick={this.handleClickPrev}>{'PREVIOUS'}</button>
+                    <button className="buttonNext" onClick={this.handleClickNext}>{'NEXT'}</button>
                 </div>
             </div>
         )
