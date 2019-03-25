@@ -72,7 +72,7 @@ let confidants = [
     {
         id: 10,
         title: "Fortune",
-        name: "Chihaya Mifune",
+        name: "Fortune Teller",
         rank: 0,
         cardUrl: "https://vignette.wikia.nocookie.net/megamitensei/images/6/6a/P5_Wheel_of_Fortune_Arcana.png/revision/latest?cb=20160728020952",
     },
@@ -86,14 +86,14 @@ let confidants = [
     {
         id: 12,
         title: "Hanged Man",
-        name: "Iwai Munehisa",
+        name: "Weapons Dealer",
         rank: 0,
         cardUrl: "https://vignette.wikia.nocookie.net/megamitensei/images/a/a1/P5_Hanged-Man_Arcana.png/revision/latest?cb=20160728021156",
     },
     {
         id: 13,
         title: "Death",
-        name: "Tae Takemi",
+        name: "Back-alley Doctor",
         rank: 0,
         cardUrl: "https://vignette.wikia.nocookie.net/megamitensei/images/a/a2/P5_Death_Arcana.png/revision/latest?cb=20160728021302",
     },
@@ -114,7 +114,7 @@ let confidants = [
     {
         id: 16,
         title: "Tower",
-        name: "Shinya Oda",
+        name: "Skilled Gamer",
         rank: 0,
         cardUrl: "https://vignette.wikia.nocookie.net/megamitensei/images/3/3e/P5_Tower_Arcana.png/revision/latest?cb=20160728021547",
     },
@@ -135,14 +135,14 @@ let confidants = [
     {
         id: 19,
         title: "Sun",
-        name: "Toranosuke Yoshida",
+        name: "Man of the People",
         rank: 0,
         cardUrl: "https://vignette.wikia.nocookie.net/megamitensei/images/3/38/P5_Sun_Arcana.png/revision/latest?cb=20160728021736",
     },
     {
         id: 20,
         title: "Judgement",
-        name: "Sae Nijima",
+        name: "Prosecutor",
         rank: 0,
         cardUrl: "https://vignette.wikia.nocookie.net/megamitensei/images/a/ab/P5_Judgement_Arcana.png/revision/latest?cb=20160916144550",
     },
@@ -164,14 +164,18 @@ module.exports = {
             return confidant.title === title
         })
 
-        if(!foundConfidant){
-            res.status(404).send(console.log("Confidant Not Found"))
+        if(title === 'All' && !userArr.length){
+            userArr.push(...confidants)
+            res.status(200).send(userArr)
+        } else if(!foundConfidant){
+            res.status(200).send("confidantErr")
         } else if(userCheck){
-            res.status(409).send(console.log("Confidant is Already In List"))
+            res.status(200).send("userArrErr")
         } else if(foundConfidant && !userCheck){
             userArr.push(foundConfidant)
             res.status(200).send(userArr)
         }
+        
     },
 
     update: (req, res) => {

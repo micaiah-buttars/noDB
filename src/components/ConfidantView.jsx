@@ -26,7 +26,7 @@ class ConfidantView extends Component {
                         userArr={userArr}
                         handleDecrement={this.props.handleDecrement}
                         handleIncrement={this.props.handleIncrement}/>
-                        <AddConfidant 
+                    <AddConfidant 
                         addConfidant={this.props.addConfidant}/>
                 </section>
                 <section className="confidantInfoContainer">
